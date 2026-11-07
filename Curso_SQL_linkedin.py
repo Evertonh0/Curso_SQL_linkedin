@@ -5,26 +5,26 @@ cursor = conexao.cursor()
 
 # Criando a tabela dentro do database:
 cursor.execute("""
-  CREATE TABLE IF NOT EXISTS alunos (
+  CREATE TABLE IF NOT EXISTS alunos_politecnica (
     matricula INTEGER PRIMARY KEY AUTOINCREMENT,
     nome TEXT,
-    cpf INTEGER
+    cpf INTEGER,
     curso TEXT
   );
 
 """)
 
+
+
 # Selecionando os dados da tabela alunos:
-cursor.execute("SELECT * FROM alunos;")
+cursor.execute("SELECT * FROM alunos_politecnica;")
 
 # Puxando os dados para o python:
 resultados = cursor.fetchall()
 
 # Printando os dados obtidos da tabela alunos:
-print('DADOS DA TABELA alunos')
+print('DADOS DA TABELA alunos_politecnica')
 for linha in resultados:
   print(linha)
 
-# Fechando a conexão:
-conexao.close()
 
