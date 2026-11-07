@@ -14,7 +14,8 @@ cursor.execute("""
 
 """)
 
-
+# Inserindo dados na tabela:
+cursor.execute("INSERT INTO alunos_politecnica (nome, cpf, curso) VALUES ('Fulano de tal', 1234567891011, 'nome do curso');")
 
 # Selecionando os dados da tabela alunos:
 cursor.execute("SELECT * FROM alunos_politecnica;")
